@@ -17,9 +17,9 @@ async def read_item(request: Request, id: str):
     return templates.TemplateResponse("item.html", {"request": request, "id": id})
 
 
-@app.get("/", response_class=HTMLResponse)
-async def read_item():
-    return templates.TemplateResponse("index.html")
+@app.get("/")
+def read_root():
+    return {"Hello": "WELCOME TO DATASCIENTEST MICRO SERVICE"}
 
 
 
